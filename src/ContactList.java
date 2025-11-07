@@ -18,6 +18,7 @@ public class ContactList {
 
             switch(selectedNumber){
                 case 1 :
+                    if(i < indexArray){
                     System.out.print("Напиши имя: ");
                     in.nextLine();
                     String name = in.nextLine();
@@ -26,6 +27,9 @@ public class ContactList {
                     array[i]=name;
                     arrayNumber[i]= numberPhone;
                     i=i+1;
+                    } else {
+                        System.out.print(" Массив уже содержит "+ indexArray +" элементов");
+                    }
                     break;
                 case 2 :
                     for(int j =0 ; j < i; j++ ){
